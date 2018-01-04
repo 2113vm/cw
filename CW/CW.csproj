@@ -74,6 +74,9 @@
     <Compile Include="Classes\Role.cs" />
     <Compile Include="Classes\Service.cs" />
     <Compile Include="Classes\User.cs" />
+    <EmbeddedResource Include="Forms\ClientCardForm.resx">
+      <DependentUpon>ClientCardForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
