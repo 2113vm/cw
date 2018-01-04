@@ -12,7 +12,7 @@ namespace CW
         {
         }
 
-        public User CurrentUser { get; set; }
+        public static User CurrentUser { get; set; }
         public virtual DbSet<Contract> Contracts { get; set; }
         public virtual DbSet<Payment> Payments { get; set; }
         public virtual DbSet<Role> Roles { get; set; }

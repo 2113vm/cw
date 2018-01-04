@@ -33,6 +33,7 @@ namespace CW
                 switch (user.Role.RoleName)
                 {
                     case "Client":
+                        ApplicationContext.CurrentUser = user;
                         break;
                     case "Admin":
                         break;
