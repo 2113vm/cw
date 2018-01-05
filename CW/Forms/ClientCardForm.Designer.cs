@@ -31,10 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.labelAddress = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.labelHotWater = new System.Windows.Forms.Label();
+            this.labelColdWater = new System.Windows.Forms.Label();
+            this.labelElect = new System.Windows.Forms.Label();
+            this.labelGas = new System.Windows.Forms.Label();
             this.buttonHotWater = new System.Windows.Forms.Button();
             this.buttonElect = new System.Windows.Forms.Button();
             this.buttonGas = new System.Windows.Forms.Button();
@@ -68,41 +68,41 @@
             this.labelAddress.TabIndex = 2;
             this.labelAddress.Text = "label3";
             // 
-            // label4
+            // labelHotWater
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(66, 220);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "label4";
+            this.labelHotWater.AutoSize = true;
+            this.labelHotWater.Location = new System.Drawing.Point(66, 220);
+            this.labelHotWater.Name = "labelHotWater";
+            this.labelHotWater.Size = new System.Drawing.Size(35, 13);
+            this.labelHotWater.TabIndex = 3;
+            this.labelHotWater.Text = "label4";
             // 
-            // label5
+            // labelColdWater
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(215, 220);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "label5";
+            this.labelColdWater.AutoSize = true;
+            this.labelColdWater.Location = new System.Drawing.Point(215, 220);
+            this.labelColdWater.Name = "labelColdWater";
+            this.labelColdWater.Size = new System.Drawing.Size(35, 13);
+            this.labelColdWater.TabIndex = 4;
+            this.labelColdWater.Text = "label5";
             // 
-            // label6
+            // labelElect
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(381, 220);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "label6";
+            this.labelElect.AutoSize = true;
+            this.labelElect.Location = new System.Drawing.Point(381, 220);
+            this.labelElect.Name = "labelElect";
+            this.labelElect.Size = new System.Drawing.Size(35, 13);
+            this.labelElect.TabIndex = 5;
+            this.labelElect.Text = "label6";
             // 
-            // label7
+            // labelGas
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(557, 220);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "label7";
+            this.labelGas.AutoSize = true;
+            this.labelGas.Location = new System.Drawing.Point(557, 220);
+            this.labelGas.Name = "labelGas";
+            this.labelGas.Size = new System.Drawing.Size(35, 13);
+            this.labelGas.TabIndex = 6;
+            this.labelGas.Text = "label7";
             // 
             // buttonHotWater
             // 
@@ -149,10 +149,10 @@
             this.Controls.Add(this.buttonGas);
             this.Controls.Add(this.buttonElect);
             this.Controls.Add(this.buttonHotWater);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelGas);
+            this.Controls.Add(this.labelElect);
+            this.Controls.Add(this.labelColdWater);
+            this.Controls.Add(this.labelHotWater);
             this.Controls.Add(this.labelAddress);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.label1);
@@ -168,10 +168,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelAddress;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelHotWater;
+        private System.Windows.Forms.Label labelColdWater;
+        private System.Windows.Forms.Label labelElect;
+        private System.Windows.Forms.Label labelGas;
         private System.Windows.Forms.Button buttonHotWater;
         private System.Windows.Forms.Button buttonElect;
         private System.Windows.Forms.Button buttonGas;
