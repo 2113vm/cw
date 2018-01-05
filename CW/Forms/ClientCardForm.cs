@@ -26,8 +26,14 @@ namespace CW.Forms
                            && c.User_Id == p.User_Id
                            && c.Service_Id == p.Service_Id
                         select (p.Amount);
-            var sum = trans.Sum().ToString();
-            return sum;
+            if (trans.Count() == 0)
+            {
+                return "0";
+            }
+            else
+            {
+                return trans.Sum().ToString();
+            }
         }
 
         public ClientCardForm()
@@ -42,6 +48,12 @@ namespace CW.Forms
             labelElect.Text = getBalance("Электричество", ApplicationContext.CurrentUser.User_Id);
             labelGas.Text = getBalance("Газ", ApplicationContext.CurrentUser.User_Id);
 
+        }
+
+        private void buttonGetReport_Click(object sender, EventArgs e)
+        {
+            var form = new Forms.ReportForm();
+            form.Show();
         }
     }
 }

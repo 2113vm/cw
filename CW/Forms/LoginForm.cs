@@ -36,7 +36,6 @@ namespace CW
                         ApplicationContext.CurrentUser = user;
                         var form = new Forms.ClientCardForm();
                         form.Show();
-                        this.Hide();
                         break;
                     case "Admin":
                         break;

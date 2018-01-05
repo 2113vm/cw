@@ -36,9 +36,6 @@
             this.labelElect = new System.Windows.Forms.Label();
             this.labelGas = new System.Windows.Forms.Label();
             this.buttonGetReport = new System.Windows.Forms.Button();
-            this.buttonElect = new System.Windows.Forms.Button();
-            this.buttonGas = new System.Windows.Forms.Button();
-            this.buttonColdWater = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -110,39 +107,13 @@
             // 
             // buttonGetReport
             // 
-            this.buttonGetReport.Location = new System.Drawing.Point(36, 154);
+            this.buttonGetReport.Location = new System.Drawing.Point(76, 159);
             this.buttonGetReport.Name = "buttonGetReport";
             this.buttonGetReport.Size = new System.Drawing.Size(106, 28);
             this.buttonGetReport.TabIndex = 7;
             this.buttonGetReport.Text = "Отчет";
             this.buttonGetReport.UseVisualStyleBackColor = true;
-            // 
-            // buttonElect
-            // 
-            this.buttonElect.Location = new System.Drawing.Point(344, 154);
-            this.buttonElect.Name = "buttonElect";
-            this.buttonElect.Size = new System.Drawing.Size(108, 28);
-            this.buttonElect.TabIndex = 9;
-            this.buttonElect.Text = "Электричество";
-            this.buttonElect.UseVisualStyleBackColor = true;
-            // 
-            // buttonGas
-            // 
-            this.buttonGas.Location = new System.Drawing.Point(516, 154);
-            this.buttonGas.Name = "buttonGas";
-            this.buttonGas.Size = new System.Drawing.Size(108, 28);
-            this.buttonGas.TabIndex = 10;
-            this.buttonGas.Text = "Газ";
-            this.buttonGas.UseVisualStyleBackColor = true;
-            // 
-            // buttonColdWater
-            // 
-            this.buttonColdWater.Location = new System.Drawing.Point(182, 145);
-            this.buttonColdWater.Name = "buttonColdWater";
-            this.buttonColdWater.Size = new System.Drawing.Size(106, 28);
-            this.buttonColdWater.TabIndex = 11;
-            this.buttonColdWater.Text = "Холодная вода";
-            this.buttonColdWater.UseVisualStyleBackColor = true;
+            this.buttonGetReport.Click += new System.EventHandler(this.buttonGetReport_Click);
             // 
             // label2
             // 
@@ -184,14 +155,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 201);
+            this.ClientSize = new System.Drawing.Size(259, 199);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.buttonColdWater);
-            this.Controls.Add(this.buttonGas);
-            this.Controls.Add(this.buttonElect);
             this.Controls.Add(this.buttonGetReport);
             this.Controls.Add(this.labelGas);
             this.Controls.Add(this.labelElect);
@@ -201,7 +169,7 @@
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.label1);
             this.Name = "ClientCardForm";
-            this.Text = "ClientCardForm";
+            this.Text = "Карточка пользователя";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,9 +185,6 @@
         private System.Windows.Forms.Label labelElect;
         private System.Windows.Forms.Label labelGas;
         private System.Windows.Forms.Button buttonGetReport;
-        private System.Windows.Forms.Button buttonElect;
-        private System.Windows.Forms.Button buttonGas;
-        private System.Windows.Forms.Button buttonColdWater;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
