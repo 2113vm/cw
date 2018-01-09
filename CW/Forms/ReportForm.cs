@@ -51,7 +51,7 @@ namespace CW.Forms
             var endDate = dateTimePickerEnd.Value;
             labelBalance.Text = "Баланс на начало периода: " + 
                 getBalance(serviceName, ApplicationContext.CurrentUser.User_Id, startDate);
-            labelBalanceEnd.Text = "Баланс на начало периода: " +
+            labelBalanceEnd.Text = "Баланс на конец периода: " +
                 getBalance(serviceName, ApplicationContext.CurrentUser.User_Id, endDate);
             labelProviderName.Text = "";
 

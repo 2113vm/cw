@@ -32,7 +32,7 @@ namespace CW
 
                 switch (user.Role.RoleName)
                 {
-                    case "Client":
+                    case "client":
                         ApplicationContext.CurrentUser = user;
                         var form = new Forms.ClientCardForm();
                         form.Show();
