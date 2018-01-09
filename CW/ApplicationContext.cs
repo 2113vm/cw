@@ -15,6 +15,7 @@ namespace CW
         public static User CurrentUser { get; set; }
         public virtual DbSet<Contract> Contracts { get; set; }
         public virtual DbSet<Payment> Payments { get; set; }
+        public virtual DbSet<Report> Reports { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Service> Services { get; set; }
         public virtual DbSet<User> Users { get; set; }
@@ -25,6 +26,12 @@ namespace CW
                 .HasMany(e => e.Payments)
                 .WithRequired(e => e.Contract)
                 .HasForeignKey(e => new { e.User_Id, e.Service_Id })
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Contract>()
+                .HasMany(e => e.Reports)
+                .WithRequired(e => e.Contract)
+                .HasForeignKey(e => new { e.User_Id, e.Serivce_Id })
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Role>()

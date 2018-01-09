@@ -55,5 +55,10 @@ namespace CW.Forms
             var form = new Forms.ReportForm();
             form.Show();
         }
+
+        private void buttonSetReport_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -40,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.buttonSetReport = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -107,9 +108,9 @@
             // 
             // buttonGetReport
             // 
-            this.buttonGetReport.Location = new System.Drawing.Point(76, 159);
+            this.buttonGetReport.Location = new System.Drawing.Point(12, 154);
             this.buttonGetReport.Name = "buttonGetReport";
-            this.buttonGetReport.Size = new System.Drawing.Size(106, 28);
+            this.buttonGetReport.Size = new System.Drawing.Size(105, 39);
             this.buttonGetReport.TabIndex = 7;
             this.buttonGetReport.Text = "Отчет";
             this.buttonGetReport.UseVisualStyleBackColor = true;
@@ -151,11 +152,22 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Газ:";
             // 
+            // buttonSetReport
+            // 
+            this.buttonSetReport.Location = new System.Drawing.Point(145, 154);
+            this.buttonSetReport.Name = "buttonSetReport";
+            this.buttonSetReport.Size = new System.Drawing.Size(102, 39);
+            this.buttonSetReport.TabIndex = 16;
+            this.buttonSetReport.Text = "Внести показания";
+            this.buttonSetReport.UseVisualStyleBackColor = true;
+            this.buttonSetReport.Click += new System.EventHandler(this.buttonSetReport_Click);
+            // 
             // ClientCardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(259, 199);
+            this.Controls.Add(this.buttonSetReport);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -189,5 +201,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button buttonSetReport;
     }
 }

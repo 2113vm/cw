@@ -36,6 +36,11 @@
             this.dataGridViewData = new System.Windows.Forms.DataGridView();
             this.labelBalance = new System.Windows.Forms.Label();
             this.labelBalanceStartPer = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.labelBalanceEnd = new System.Windows.Forms.Label();
+            this.labelProviderName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +55,7 @@
             // 
             // buttonGetReport
             // 
-            this.buttonGetReport.Location = new System.Drawing.Point(94, 167);
+            this.buttonGetReport.Location = new System.Drawing.Point(126, 168);
             this.buttonGetReport.Name = "buttonGetReport";
             this.buttonGetReport.Size = new System.Drawing.Size(139, 23);
             this.buttonGetReport.TabIndex = 3;
@@ -60,14 +65,14 @@
             // 
             // dateTimePickerStart
             // 
-            this.dateTimePickerStart.Location = new System.Drawing.Point(12, 102);
+            this.dateTimePickerStart.Location = new System.Drawing.Point(167, 102);
             this.dateTimePickerStart.Name = "dateTimePickerStart";
             this.dateTimePickerStart.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerStart.TabIndex = 4;
             // 
             // dateTimePickerEnd
             // 
-            this.dateTimePickerEnd.Location = new System.Drawing.Point(12, 128);
+            this.dateTimePickerEnd.Location = new System.Drawing.Point(167, 128);
             this.dateTimePickerEnd.Name = "dateTimePickerEnd";
             this.dateTimePickerEnd.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerEnd.TabIndex = 5;
@@ -80,7 +85,7 @@
             "Горячая вода",
             "Электричество",
             "Газ"});
-            this.comboBoxServices.Location = new System.Drawing.Point(13, 75);
+            this.comboBoxServices.Location = new System.Drawing.Point(167, 75);
             this.comboBoxServices.Name = "comboBoxServices";
             this.comboBoxServices.Size = new System.Drawing.Size(157, 21);
             this.comboBoxServices.TabIndex = 6;
@@ -88,9 +93,9 @@
             // dataGridViewData
             // 
             this.dataGridViewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewData.Location = new System.Drawing.Point(12, 238);
+            this.dataGridViewData.Location = new System.Drawing.Point(12, 267);
             this.dataGridViewData.Name = "dataGridViewData";
-            this.dataGridViewData.Size = new System.Drawing.Size(314, 120);
+            this.dataGridViewData.Size = new System.Drawing.Size(356, 120);
             this.dataGridViewData.TabIndex = 7;
             // 
             // labelBalance
@@ -110,11 +115,60 @@
             this.labelBalanceStartPer.Size = new System.Drawing.Size(0, 13);
             this.labelBalanceStartPer.TabIndex = 9;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Выберите услугу";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 108);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Дата начала периода:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 134);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(114, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Дата конца периода:";
+            // 
+            // labelBalanceEnd
+            // 
+            this.labelBalanceEnd.AutoSize = true;
+            this.labelBalanceEnd.Location = new System.Drawing.Point(12, 230);
+            this.labelBalanceEnd.Name = "labelBalanceEnd";
+            this.labelBalanceEnd.Size = new System.Drawing.Size(140, 13);
+            this.labelBalanceEnd.TabIndex = 13;
+            this.labelBalanceEnd.Text = "Баланс на конец периода:";
+            // 
+            // labelProviderName
+            // 
+            this.labelProviderName.AutoSize = true;
+            this.labelProviderName.Location = new System.Drawing.Point(15, 411);
+            this.labelProviderName.Name = "labelProviderName";
+            this.labelProviderName.Size = new System.Drawing.Size(0, 13);
+            this.labelProviderName.TabIndex = 14;
+            // 
             // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 370);
+            this.ClientSize = new System.Drawing.Size(380, 436);
+            this.Controls.Add(this.labelProviderName);
+            this.Controls.Add(this.labelBalanceEnd);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.labelBalanceStartPer);
             this.Controls.Add(this.labelBalance);
             this.Controls.Add(this.dataGridViewData);
@@ -141,5 +195,10 @@
         private System.Windows.Forms.DataGridView dataGridViewData;
         private System.Windows.Forms.Label labelBalance;
         private System.Windows.Forms.Label labelBalanceStartPer;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelBalanceEnd;
+        private System.Windows.Forms.Label labelProviderName;
     }
 }

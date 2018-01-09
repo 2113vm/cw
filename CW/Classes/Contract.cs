@@ -12,6 +12,7 @@ namespace CW
         public Contract()
         {
             Payments = new HashSet<Payment>();
+            Reports = new HashSet<Report>();
         }
 
         [Key]
@@ -30,5 +31,8 @@ namespace CW
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Payment> Payments { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Report> Reports { get; set; }
     }
 }
