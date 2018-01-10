@@ -19,7 +19,15 @@ namespace CW.Forms
 
         private void buttonAddUser_Click(object sender, EventArgs e)
         {
-
+            var FirstName = textBoxFirstName.Text;
+            var SecondName = textBoxSecondName.Text;
+            var ThirdName = textBoxThirdName.Text;
+            var Address = textBoxAddress.Text;
+            var Tenants = textBoxTenants.Text;
+            var Area = textBoxArea.Text;
+            var Passport = textBoxPassport.Text;
+            var Login = textBoxCreateLogin.Text;
+            var Password = textBoxCreatePassword.Text;
         }
     }
 }

@@ -68,6 +68,12 @@
     <Compile Include="Forms\AddPaymentsForm.Designer.cs">
       <DependentUpon>AddPaymentsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AddServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddServiceForm.Designer.cs">
+      <DependentUpon>AddServiceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ClientCardForm.cs">
       <SubType>Form</SubType>
     </Compile>

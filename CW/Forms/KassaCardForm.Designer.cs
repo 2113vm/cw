@@ -30,6 +30,7 @@
         {
             this.buttonAddUser = new System.Windows.Forms.Button();
             this.buttonAddPayments = new System.Windows.Forms.Button();
+            this.buttonAddService = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonAddUser
@@ -52,11 +53,22 @@
             this.buttonAddPayments.UseVisualStyleBackColor = true;
             this.buttonAddPayments.Click += new System.EventHandler(this.buttonAddPayments_Click);
             // 
+            // buttonAddService
+            // 
+            this.buttonAddService.Location = new System.Drawing.Point(12, 117);
+            this.buttonAddService.Name = "buttonAddService";
+            this.buttonAddService.Size = new System.Drawing.Size(260, 47);
+            this.buttonAddService.TabIndex = 2;
+            this.buttonAddService.Text = "Добавить услугу";
+            this.buttonAddService.UseVisualStyleBackColor = true;
+            this.buttonAddService.Click += new System.EventHandler(this.buttonAddService_Click);
+            // 
             // KassaCardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 121);
+            this.ClientSize = new System.Drawing.Size(286, 185);
+            this.Controls.Add(this.buttonAddService);
             this.Controls.Add(this.buttonAddPayments);
             this.Controls.Add(this.buttonAddUser);
             this.Name = "KassaCardForm";
@@ -69,5 +81,6 @@
 
         private System.Windows.Forms.Button buttonAddUser;
         private System.Windows.Forms.Button buttonAddPayments;
+        private System.Windows.Forms.Button buttonAddService;
     }
 }

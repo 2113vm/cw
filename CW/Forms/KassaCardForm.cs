@@ -29,5 +29,11 @@ namespace CW.Forms
             var AddPaymentsForm = new Forms.AddPaymentsForm();
             AddPaymentsForm.Show();
         }
+
+        private void buttonAddService_Click(object sender, EventArgs e)
+        {
+            var AddServiceForm = new Forms.AddServiceForm();
+            AddServiceForm.Show();
+        }
     }
 }
