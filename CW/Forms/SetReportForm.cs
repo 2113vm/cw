@@ -24,12 +24,7 @@ namespace CW.Forms
             var ServiceName = comboBoxServiceName.Text;
             var Meter = textBoxMeter.Text.ToString();
             DateTime localDate = DateTime.Now;
-            // TODO: add meterage in database
-            System.Data.SqlClient.SqlParameter paramUserId = new System.Data.SqlClient.SqlParameter("@User_Id", ApplicationContext.CurrentUser.User_Id);
-            System.Data.SqlClient.SqlParameter paramServiceId = new System.Data.SqlClient.SqlParameter("@Service_Id", 1);
-            System.Data.SqlClient.SqlParameter paramDate = new System.Data.SqlClient.SqlParameter("@Date", localDate);
-            System.Data.SqlClient.SqlParameter paramMeter = new System.Data.SqlClient.SqlParameter("@Meterage", Meter);
-            //var connection = (SqlConnection)db.Database.AsSqlServer().Connection.DbConnection
+
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = ApplicationContext.ConString;
 
@@ -44,6 +39,11 @@ namespace CW.Forms
             {
                 connection.Open();
                 command.ExecuteNonQuery();
+                MessageBox.Show("Показания счетчика добавлены в базу данных");
+            }
+            catch
+            {
+                MessageBox.Show("Не удалось внести данные в базу данных, попробуйте позже");
             }
             finally
             {
