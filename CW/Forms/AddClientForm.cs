@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace CW.Forms
 {
-    public partial class KassaCardForm : Form
+    public partial class AddClientForm : Form
     {
-        public KassaCardForm()
+        public AddClientForm()
         {
             InitializeComponent();
-        }
-
-        private void buttonAddUser_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonAddPayments_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
