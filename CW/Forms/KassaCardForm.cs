@@ -19,12 +19,15 @@ namespace CW.Forms
 
         private void buttonAddUser_Click(object sender, EventArgs e)
         {
+            var AddClientForm = new Forms.AddClientForm();
+            AddClientForm.Show();
 
         }
 
         private void buttonAddPayments_Click(object sender, EventArgs e)
         {
-
+            var AddPaymentsForm = new Forms.AddPaymentsForm();
+            AddPaymentsForm.Show();
         }
     }
 }
