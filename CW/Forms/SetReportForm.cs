@@ -40,10 +40,25 @@ namespace CW.Forms
             var commandGetLastMeter = connection.CreateCommand();
             commandGetLastMeter.CommandType = CommandType.StoredProcedure;
             commandGetLastMeter.CommandText = "getLastMeterage";
+            commandGetLastMeter.Parameters.AddWithValue("@User_Id", ApplicationContext.CurrentUser.User_Id);
+            commandGetLastMeter.Parameters.AddWithValue("@Service_Id", service_id);
+
+            var commandAddPaymentMeter = connection.CreateCommand();
+            commandAddPaymentMeter.CommandType = CommandType.StoredProcedure;
+            commandAddPaymentMeter.CommandText = "addPaymentMeter";
+            commandAddPaymentMeter.Parameters.AddWithValue("@User_Id", ApplicationContext.CurrentUser.User_Id);
+            commandAddPaymentMeter.Parameters.AddWithValue("@Service_Id", service_id);
+            commandAddPaymentMeter.Parameters.AddWithValue("@Date", localDate);
 
             try
             {
                 connection.Open();
+
+                int lastMeter = commandGetLastMeter.ExecuteNonQuery();
+                int diff = Math.Abs(lastMeter - Convert.ToInt32(Meter));
+                commandAddPaymentMeter.Parameters.AddWithValue("@diff", diff);
+                commandAddPaymentMeter.ExecuteNonQuery();
+
                 commandAddMeter.ExecuteNonQuery();
                 MessageBox.Show("Показания счетчика добавлены в базу данных");
             }
@@ -54,6 +69,7 @@ namespace CW.Forms
             finally
             {
                 connection.Close();
+                this.Hide();
             }
             
         }
