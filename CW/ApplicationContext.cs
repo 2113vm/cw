@@ -4,6 +4,7 @@ namespace CW
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
+    using System.Collections.Generic;
 
     public partial class ApplicationContext : DbContext
     {
@@ -14,6 +15,7 @@ namespace CW
 
         public static User CurrentUser { get; set; }
         public static string ConString = "Data Source=GOOGOLPLEX-ой\\SQLEXPRESS;Initial Catalog=db;Integrated Security=True";
+        public static Dictionary<string, int> dict_services = new Dictionary<string, int>();
         public virtual DbSet<Contract> Contracts { get; set; }
         public virtual DbSet<Payment> Payments { get; set; }
         public virtual DbSet<Report> Reports { get; set; }

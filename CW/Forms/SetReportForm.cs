@@ -23,22 +23,28 @@ namespace CW.Forms
             var db = new ApplicationContext();
             var ServiceName = comboBoxServiceName.Text;
             var Meter = textBoxMeter.Text.ToString();
+            var service_id = ApplicationContext.dict_services[ServiceName];
             DateTime localDate = DateTime.Now;
 
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = ApplicationContext.ConString;
 
-            var command = connection.CreateCommand();
-            command.CommandType = CommandType.StoredProcedure;
-            command.CommandText = "addMeter";
-            command.Parameters.AddWithValue("@User_Id", ApplicationContext.CurrentUser.User_Id);
-            command.Parameters.AddWithValue("@Service_Id", 1);
-            command.Parameters.AddWithValue("@Date", localDate);
-            command.Parameters.AddWithValue("@Meterage", Meter);
+            var commandAddMeter = connection.CreateCommand();
+            commandAddMeter.CommandType = CommandType.StoredProcedure;
+            commandAddMeter.CommandText = "addMeter";
+            commandAddMeter.Parameters.AddWithValue("@User_Id", ApplicationContext.CurrentUser.User_Id);
+            commandAddMeter.Parameters.AddWithValue("@Service_Id", service_id);
+            commandAddMeter.Parameters.AddWithValue("@Date", localDate);
+            commandAddMeter.Parameters.AddWithValue("@Meterage", Meter);
+
+            var commandGetLastMeter = connection.CreateCommand();
+            commandGetLastMeter.CommandType = CommandType.StoredProcedure;
+            commandGetLastMeter.CommandText = "getLastMeterage";
+
             try
             {
                 connection.Open();
-                command.ExecuteNonQuery();
+                commandAddMeter.ExecuteNonQuery();
                 MessageBox.Show("Показания счетчика добавлены в базу данных");
             }
             catch
