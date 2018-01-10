@@ -16,5 +16,10 @@ namespace CW.Forms
         {
             InitializeComponent();
         }
+
+        private void buttonAddUser_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
