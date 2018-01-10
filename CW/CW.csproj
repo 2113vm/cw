@@ -114,6 +114,12 @@
     <EmbeddedResource Include="Forms\AddClientForm.resx">
       <DependentUpon>AddClientForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddPaymentsForm.resx">
+      <DependentUpon>AddPaymentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddServiceForm.resx">
+      <DependentUpon>AddServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ClientCardForm.resx">
       <DependentUpon>ClientCardForm.cs</DependentUpon>
     </EmbeddedResource>

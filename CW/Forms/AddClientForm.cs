@@ -19,6 +19,12 @@ namespace CW.Forms
 
         private void buttonAddUser_Click(object sender, EventArgs e)
         {
+            // check duplicate user
+            // if not have duplicate then add user
+            // else show message about it
+
+            // Need check duplicate user
+            // if user is new then set his service and first meterage
             var FirstName = textBoxFirstName.Text;
             var SecondName = textBoxSecondName.Text;
             var ThirdName = textBoxThirdName.Text;
