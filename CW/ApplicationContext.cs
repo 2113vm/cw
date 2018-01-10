@@ -13,6 +13,7 @@ namespace CW
         }
 
         public static User CurrentUser { get; set; }
+        public static string ConString = "Data Source=GOOGOLPLEX-ой\\SQLEXPRESS;Initial Catalog=db;Integrated Security=True";
         public virtual DbSet<Contract> Contracts { get; set; }
         public virtual DbSet<Payment> Payments { get; set; }
         public virtual DbSet<Report> Reports { get; set; }

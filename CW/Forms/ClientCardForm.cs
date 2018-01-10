@@ -48,6 +48,7 @@ namespace CW.Forms
             labelElect.Text = getBalance("Электричество", ApplicationContext.CurrentUser.User_Id);
             labelGas.Text = getBalance("Газ", ApplicationContext.CurrentUser.User_Id);
 
+
         }
 
         private void buttonGetReport_Click(object sender, EventArgs e)
@@ -58,7 +59,8 @@ namespace CW.Forms
 
         private void buttonSetReport_Click(object sender, EventArgs e)
         {
-
+            var form = new Forms.SetReportForm();
+            form.Show();
         }
     }
 }
