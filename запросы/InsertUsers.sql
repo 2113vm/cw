@@ -1,0 +1,2 @@
+INSERT dbo.Users (Role_Id, FirstName, LastName, ThirdName, Login, Password, Passport, Area, Tenants, Address, DateRegistration) VALUES (1, 'Иван','Иванов','Иванович','1','1',123,40,3,'Челябинск','2017.01.01'),
+				     																												   (2, 'Петя','Петров','Петрович','2','2',321,40,3,'Челябинск','2017.01.01')			
