@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data.Entity;
 
 namespace CW.Forms
 {
@@ -41,24 +42,44 @@ namespace CW.Forms
             var commandAddSerice = connection.CreateCommand();
             commandAddSerice.CommandType = CommandType.StoredProcedure;
             commandAddSerice.CommandText = "addService";
+            commandAddSerice.Parameters.AddWithValue("@Price", textBoxPrice.Text);
+            commandAddSerice.Parameters.AddWithValue("@ProviderName", textBoxProviderName.Text);
+            commandAddSerice.Parameters.AddWithValue("@ServiceName", textBoxServiceName.Text);
 
+            var db = new ApplicationContext();
+            db.Services.Load();
 
-            try
+            var trans = from s in db.Services
+                        where s.ProviderName == textBoxProviderName.Text &&
+                              s.ServiceName == textBoxServiceName.Text
+                        select new
+                        {
+                            service_id = s.Service_Id
+                        };
+
+            if (trans.Count() == 0)
             {
-                connection.Open();
+                try
+                {
+                    connection.Open();
 
-                commandAddSerice.ExecuteNonQuery();
-                MessageBox.Show("Услуга успешно добавлена");
-                this.Hide();
+                    commandAddSerice.ExecuteNonQuery();
+                    MessageBox.Show("Услуга успешно добавлена");
+                    this.Hide();
 
+                }
+                catch
+                {
+                    MessageBox.Show("Не удалось добавить услугу, попробуйте позже");
+                }
+                finally
+                {
+                    connection.Close();
+                }
             }
-            catch
+            else
             {
-                MessageBox.Show("Не удалось добавить услугу, попробуйте позже");
-            }
-            finally
-            {
-                connection.Close();
+                MessageBox.Show("Данная услуга уже существует");
             }
         }
     }

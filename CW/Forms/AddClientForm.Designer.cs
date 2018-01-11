@@ -47,11 +47,20 @@
             this.textBoxPassport = new System.Windows.Forms.TextBox();
             this.textBoxCreateLogin = new System.Windows.Forms.TextBox();
             this.textBoxCreatePassword = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.comboBoxColdProvider = new System.Windows.Forms.ComboBox();
+            this.comboBoxHotProvider = new System.Windows.Forms.ComboBox();
+            this.comboBoxGasProvider = new System.Windows.Forms.ComboBox();
+            this.comboBoxElectProvider = new System.Windows.Forms.ComboBox();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonAddUser
             // 
-            this.buttonAddUser.Location = new System.Drawing.Point(196, 288);
+            this.buttonAddUser.Location = new System.Drawing.Point(104, 431);
             this.buttonAddUser.Name = "buttonAddUser";
             this.buttonAddUser.Size = new System.Drawing.Size(120, 37);
             this.buttonAddUser.TabIndex = 0;
@@ -203,11 +212,98 @@
             this.textBoxCreatePassword.Size = new System.Drawing.Size(160, 20);
             this.textBoxCreatePassword.TabIndex = 18;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(50, 291);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(199, 13);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Укажите поставщика холодной воды:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(50, 315);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(192, 13);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Укажите поставщика горячей воды:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(50, 341);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(146, 13);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Укажите поставщика газа:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(50, 367);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(198, 13);
+            this.label13.TabIndex = 22;
+            this.label13.Text = "Укажите поставщика электричество:";
+            // 
+            // comboBoxColdProvider
+            // 
+            this.comboBoxColdProvider.FormattingEnabled = true;
+            this.comboBoxColdProvider.Location = new System.Drawing.Point(313, 288);
+            this.comboBoxColdProvider.Name = "comboBoxColdProvider";
+            this.comboBoxColdProvider.Size = new System.Drawing.Size(200, 21);
+            this.comboBoxColdProvider.TabIndex = 23;
+            // 
+            // comboBoxHotProvider
+            // 
+            this.comboBoxHotProvider.FormattingEnabled = true;
+            this.comboBoxHotProvider.Location = new System.Drawing.Point(313, 312);
+            this.comboBoxHotProvider.Name = "comboBoxHotProvider";
+            this.comboBoxHotProvider.Size = new System.Drawing.Size(200, 21);
+            this.comboBoxHotProvider.TabIndex = 24;
+            // 
+            // comboBoxGasProvider
+            // 
+            this.comboBoxGasProvider.FormattingEnabled = true;
+            this.comboBoxGasProvider.Location = new System.Drawing.Point(313, 338);
+            this.comboBoxGasProvider.Name = "comboBoxGasProvider";
+            this.comboBoxGasProvider.Size = new System.Drawing.Size(200, 21);
+            this.comboBoxGasProvider.TabIndex = 25;
+            // 
+            // comboBoxElectProvider
+            // 
+            this.comboBoxElectProvider.FormattingEnabled = true;
+            this.comboBoxElectProvider.Location = new System.Drawing.Point(313, 364);
+            this.comboBoxElectProvider.Name = "comboBoxElectProvider";
+            this.comboBoxElectProvider.Size = new System.Drawing.Size(200, 21);
+            this.comboBoxElectProvider.TabIndex = 26;
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Location = new System.Drawing.Point(240, 431);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(110, 37);
+            this.buttonCancel.TabIndex = 27;
+            this.buttonCancel.Text = "Отмена";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
             // AddClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 342);
+            this.ClientSize = new System.Drawing.Size(531, 480);
+            this.Controls.Add(this.buttonCancel);
+            this.Controls.Add(this.comboBoxElectProvider);
+            this.Controls.Add(this.comboBoxGasProvider);
+            this.Controls.Add(this.comboBoxHotProvider);
+            this.Controls.Add(this.comboBoxColdProvider);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.textBoxCreatePassword);
             this.Controls.Add(this.textBoxCreateLogin);
             this.Controls.Add(this.textBoxPassport);
@@ -255,5 +351,14 @@
         private System.Windows.Forms.TextBox textBoxPassport;
         private System.Windows.Forms.TextBox textBoxCreateLogin;
         private System.Windows.Forms.TextBox textBoxCreatePassword;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox comboBoxColdProvider;
+        private System.Windows.Forms.ComboBox comboBoxHotProvider;
+        private System.Windows.Forms.ComboBox comboBoxGasProvider;
+        private System.Windows.Forms.ComboBox comboBoxElectProvider;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }
